@@ -28,10 +28,6 @@ const HomePage = withPageAuthRequired(
     pokemons: PokemonTypes;
     rawdata: FetchAllPokemonResponse;
   }) => {
-    //this home page has to be static or server side rendered, just as the normal pokemons one,
-    //with the differnece that instead of the id, is just the page number in pairs of 20
-    console.log(rawdata.next);
-    console.log(pokemons);
     const [page, setPage] = useState("");
     const [search, setSearch] = useState("");
 

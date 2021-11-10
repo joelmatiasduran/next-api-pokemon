@@ -13,7 +13,6 @@ const Pokemon = withPageAuthRequired((pokemon: any) => {
   const pokemondescription = pokemon.pokemon.moves;
   const pokemonEvolution = pokemon.pokemandesc.chain.evolves_to;
 
-  // console.log(pokemon);
   return (
     <>
       <div className="w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
@@ -82,15 +81,22 @@ const Pokemon = withPageAuthRequired((pokemon: any) => {
                   key={index}
                   className="justify-center text-center items-center list-none m-1 p-3"
                 >
-                  <Link href={`/${pokemonEvolution.species}`}>
+                  <Link
+                    href={`/pokemon/${
+                      pokemonEvolution.species.url.split("/")[6]
+                    }`}
+                  >
                     <a className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
                       {pokemonEvolution.species.name}
                     </a>
                   </Link>
                 </div>
               ))}
+            {/* <Link>
+              <a>Go</a>
+            </Link> */}
           </div>
-          <Link href="/homepage">
+          <Link href={""}>
             <a className="p-4 m-4 bg-yellow-300 rounded-full hover:bg-transparent hover:text-white duration-300 border border-transparent  hover:border-white">
               Evolutions
             </a>
@@ -110,7 +116,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   const pokemandesc = resdesc.data;
   let pokemanevolve = resdesc.data.chain.evolves_to;
-
+  // To add evolution image also
   // const pokemons = await Promise.all(
   //   pokemanevolve.map(async (array: any, index: number) => {
   //     const pokename = pokemanevolve.index.species.name;
