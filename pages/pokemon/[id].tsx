@@ -1,16 +1,19 @@
 import React from "react";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { GetServerSideProps } from "next";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
-interface Props {}
+interface Props {
+  pokemon: any;
+}
 
-const Pokemon = (pokemon: any) => {
+const Pokemon = withPageAuthRequired((pokemon: any) => {
   const pokemondescription = pokemon.pokemon.moves;
   const pokemonEvolution = pokemon.pokemandesc.chain.evolves_to;
 
-  console.log(pokemon);
+  // console.log(pokemon);
   return (
     <>
       <div className="w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
@@ -96,7 +99,7 @@ const Pokemon = (pokemon: any) => {
       </div>
     </>
   );
-};
+});
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const id = query.id;

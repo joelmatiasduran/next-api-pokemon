@@ -125,7 +125,7 @@ const HomePage = withPageAuthRequired(
 export const getStaticProps: GetStaticProps = async (query) => {
   const pageNumber = 0;
   const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon?offset=${pageNumber}&limit=50`
+    `https://pokeapi.co/api/v2/pokemon?offset=${pageNumber}&limit=20`
   );
   const rawdata = response.data;
   const data = response.data.results;
