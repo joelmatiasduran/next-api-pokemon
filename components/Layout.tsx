@@ -14,7 +14,7 @@ const Layout: React.FC<Props> = ({ children, title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Navbar />
+      <Navbar user={""} />
       <main>{children}</main>
       <Footer />
     </>
