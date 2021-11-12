@@ -54,7 +54,11 @@ const HomePage = withPageAuthRequired(
           </Head>
           <div className="flex flex-col items-center text-center justify-center mb-10">
             <h1 className="w-full flex-col md:flex-row text-2xl md:text-3xl text-center items-center justify-center p-10 bg-yellow-300">
-              <Squirtle />
+              <Link href="/pokemon/7">
+                <a>
+                  <Squirtle />
+                </a>
+              </Link>
               <span className="text-3xl m-5 font-mono">Welcome!!</span>
               <br></br>
               <div className="mt-10">
