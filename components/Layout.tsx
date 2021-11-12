@@ -4,15 +4,15 @@ import Navbar from "./Navbar";
 import Head from "next/head";
 
 interface Props {
-  children: ReactElement;
+  children: React.ReactNode;
   title?: string;
 }
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout: React.FC<Props> = ({ children, title }) => {
   return (
     <>
       <Head>
-        <title>Next Pokemon</title>
+        <title>{title}</title>
       </Head>
       <Navbar />
       <main>{children}</main>

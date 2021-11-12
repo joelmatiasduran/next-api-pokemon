@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { useUser } from "@auth0/nextjs-auth0";
+import lottie from "lottie-web";
 import Link from "next/link";
+import Head from "next/head";
 
 interface Props {
   user: String;
@@ -10,20 +12,40 @@ interface Props {
 const LoginPage: React.FC<Props> = () => {
   const router = useRouter();
   const { user } = useUser();
+  const elementottie = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    lottie.loadAnimation({
+      container: elementottie.current as HTMLDivElement,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../public/images/squirtle.json"),
+    });
+
     if (user) {
       router.push("/homepage");
     }
+    return () => {
+      lottie.destroy();
+    };
   }, [router, user]);
 
   return (
     <>
+      <Head>
+        <title>Login</title>
+      </Head>
       <section className="h-full w-full text-black bg-yellow-300">
         <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-          <div className="text-center lg:w-2/3 w-full">
+          <div className="flex items-center justify-center flex-col text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-mono">
               Welcome to the Pokemon API.{" "}
             </h1>
+            <div
+              className="elementottie h-60 w-60 items-center justify-center text-center"
+              ref={elementottie}
+            ></div>
             {!user && (
               <p className="leading-relaxed mb-8 font-normal">
                 Please Login to get access to the Pokemon API, and see all of
