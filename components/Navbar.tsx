@@ -2,9 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
 
-interface Props {}
+interface Props {
+  user: string;
+}
 
-const Navbar = (props: Props) => {
+const Navbar: React.FC<Props> = (props: Props) => {
   const { user } = useUser();
 
   return (

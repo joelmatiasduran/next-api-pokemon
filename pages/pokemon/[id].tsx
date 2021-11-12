@@ -98,9 +98,6 @@ const Pokemon = withPageAuthRequired((pokemon: any) => {
                   </Link>
                 </div>
               ))}
-            {/* <Link>
-              <a>Go</a>
-            </Link> */}
           </div>
           <Link href={""}>
             <a className="p-4 m-4 bg-yellow-300 rounded-full hover:bg-transparent hover:text-white duration-300 border border-transparent  hover:border-white">

@@ -104,7 +104,7 @@ const HomePage = withPageAuthRequired(
                 key={index}
                 className="text-center items-center list-none m-4 p-3"
               >
-                {pokemon ? (
+                {{ pokemon } ? (
                   <span className="w-full bg-red-600 hover:bg-yellow-300 duration-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-black hover:text-red-600">
                     <Link href={`/pokemon/${index + 1}`} passHref>
                       <a className="flex flex-col p-5 items-center justify-center text-center">
@@ -142,7 +142,7 @@ const HomePage = withPageAuthRequired(
 export const getStaticProps: GetStaticProps = async (query) => {
   const pageNumber = 0;
   const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon?offset=${pageNumber}&limit=50`
+    `https://pokeapi.co/api/v2/pokemon?offset=${pageNumber}&limit=20`
   );
   const rawdata = response.data;
   const data = response.data.results;
