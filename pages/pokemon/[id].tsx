@@ -4,6 +4,7 @@ import { GetServerSideProps } from "next";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 interface Props {
   pokemon: any;
@@ -12,9 +13,14 @@ interface Props {
 const Pokemon = withPageAuthRequired((pokemon: any) => {
   const pokemondescription = pokemon.pokemon.moves;
   const pokemonEvolution = pokemon.pokemandesc.chain.evolves_to;
+  const pokemonName = pokemon.pokemon.name;
+  const str2 = pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
 
   return (
     <>
+      <Head>
+        <title>{`${str2} | Next Js`}</title>
+      </Head>
       <div className="w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
         {/*Moves */}
         <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg">

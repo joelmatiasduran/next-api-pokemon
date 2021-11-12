@@ -82,13 +82,15 @@ const HomePage = withPageAuthRequired(
               </button>
             </div>
             <form>
-              <h2 className="font-mono">SEARCH YOUR POKEMON!</h2>
+              <h2 className="font-mono focus-within:text-transparent">
+                SEARCH YOUR POKEMON!
+              </h2>
               <div className="relative mr-6 my-2">
                 <input
                   type="text"
                   placeholder="Search your Pokemon!"
                   onChange={handleChange}
-                  className="border-2 border-red-600 p-4"
+                  className="border-2 border-red-600 p-4 transform focus:scale-150 duration-300 ease-in-out focus:ring-8 focus:rounded-full"
                 />
               </div>
             </form>
