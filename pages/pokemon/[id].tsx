@@ -20,12 +20,12 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
   return (
     <>
       <Layout title={`${str2} | Next Js`}>
-        <div className="w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
+        <div className="h-full w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
           {/*Moves */}
           <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg">
             <h2 className="text-3xl p-10 text-white">Moves</h2>
             <br></br>
-            <div className="text-center flex flex-wrap">
+            <div className="text-center flex flex-wrap pb-10">
               {/*this time the index value here it should be the value for the next page*/}
 
               {pokemondescription
@@ -48,7 +48,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
             </div>
           </div>
           {/*The pokemon Itself */}
-          <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-3/3 rounded-lg">
+          <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-3/3 py-6 rounded-lg">
             <h2 className="text-3xl p-10 text-black  font-mono">
               Who is that pokemon?
             </h2>
