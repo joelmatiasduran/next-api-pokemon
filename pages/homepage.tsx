@@ -12,6 +12,7 @@ import {
   PokemonTypes,
 } from "../interfaces/PokemonTypes";
 import Squirtle from "../components/Squirtle";
+import Layout from "../components/Layout";
 
 interface Props {
   user: { name: string };
@@ -40,94 +41,93 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
 
       return (
         <>
-          <Head>
-            <title>Home | Next Js</title>
-          </Head>
-          <div className="flex flex-col items-center text-center justify-center mb-10">
-            <h1 className="w-full flex-col md:flex-row text-2xl md:text-3xl text-center items-center justify-center p-10 bg-yellow-300">
-              <Link href="/pokemon/7">
-                <a>
-                  <Squirtle />
-                </a>
-              </Link>
-              <span className="text-3xl m-5 font-mono">Welcome!!</span>
-              <br></br>
-              <div className="mt-10">
-                <span className="cursor-pointer capitalize bg-red-500 border-2 border-transparent hover:bg-yellow-300 hover:border-red-600 text-white hover:text-black p-5 rounded-full duration-300">
-                  {" "}
-                  {user.name}{" "}
-                </span>
-              </div>
-            </h1>
-            <div className="flex flex-col p-10 items-center justify-center text-center transform hover:scale-150 bg-blue-400 hover:bg-transparent hover:border-blue-400 border-2 border-transparent rounded-lg text-black hover:text-blue-400 h-24 w-1/3 duration-300">
-              <h2 className="text-sm m-10 text-center font-bold font-mono">
-                Now that you are logged in, you can see all the pokemons! ;)
-              </h2>
-            </div>
-          </div>
-          <div className="text-center justify-center relative">
-            <div className="px-14 py-6 absolute right-0 z-10">
-              <button className="bg-red-600 hover:bg-yellow-300 duration-300 p-6 text-white hover:text-black rounded-full right-5 transform hover:scale-150 cursor-pointer">
-                Next
-              </button>
-            </div>
-            <div className="px-14 py-6 absolute left-0 z-10">
-              <button className="bg-red-600 hover:bg-yellow-300 duration-300 p-6 text-white hover:text-black rounded-full left-5 transform hover:scale-150 cursor-pointer">
-                Previous
-              </button>
-            </div>
-            <form>
-              <h2 className="font-mono focus-within:text-transparent">
-                SEARCH YOUR POKEMON!
-              </h2>
-              <div className="relative mr-6 my-2">
-                <input
-                  type="text"
-                  placeholder="Search your Pokemon!"
-                  onChange={handleChange}
-                  className="border-2 border-red-600 p-4 transform focus:scale-150 duration-300 ease-in-out focus:ring-8 focus:rounded-full"
-                />
-              </div>
-            </form>
-          </div>
-
-          {/*Displaying Pokemon Info */}
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredPokemons.map((pokemon: PokemonTypes, index: number) => (
-              <li
-                key={index}
-                className="text-center items-center list-none m-4 p-3"
-              >
-                {{ pokemon } ? (
-                  <span className="w-full bg-red-600 hover:bg-yellow-300 duration-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-black hover:text-red-600">
-                    <Link href={`/pokemon/${index + 1}`} passHref>
-                      <a className="flex flex-col p-5 items-center justify-center text-center">
-                        <span className="capitalize text-xl font-bold font-mono">
-                          {pokemon.name}
-                        </span>
-                        <br></br>
-                        <div className="transform hover:scale-150 duration-300 cursor-pointer">
-                          {!pokemon.image ? (
-                            "Loading . . ."
-                          ) : (
-                            <Image
-                              src={pokemon.image}
-                              height={100}
-                              width={100}
-                              alt={pokemon.name}
-                            />
-                          )}
-                        </div>
-                      </a>
-                    </Link>
+          <Layout title="Home | Next.js">
+            <div className="flex flex-col items-center text-center justify-center mb-10">
+              <h1 className="w-full flex-col md:flex-row text-2xl md:text-3xl text-center items-center justify-center p-10 bg-yellow-300">
+                <Link href="/pokemon/7">
+                  <a>
+                    <Squirtle />
+                  </a>
+                </Link>
+                <span className="text-3xl m-5 font-mono">Welcome!!</span>
+                <br></br>
+                <div className="mt-10">
+                  <span className="cursor-pointer capitalize bg-red-500 border-2 border-transparent hover:bg-yellow-300 hover:border-red-600 text-white hover:text-black p-5 rounded-full duration-300">
+                    {" "}
+                    {user.name}{" "}
                   </span>
-                ) : (
-                  "loading . . ."
-                )}
-              </li>
-            ))}
-          </div>
+                </div>
+              </h1>
+              <div className="flex flex-col p-10 items-center justify-center text-center transform hover:scale-150 bg-blue-400 hover:bg-transparent hover:border-blue-400 border-2 border-transparent rounded-lg text-black hover:text-blue-400 h-24 w-1/3 duration-300">
+                <h2 className="text-sm m-10 text-center font-bold font-mono">
+                  Now that you are logged in, you can see all the pokemons! ;)
+                </h2>
+              </div>
+            </div>
+            <div className="text-center justify-center relative">
+              <div className="px-14 py-6 absolute right-0 z-10">
+                <button className="bg-red-600 hover:bg-yellow-300 duration-300 p-6 text-white hover:text-black rounded-full right-5 transform hover:scale-150 cursor-pointer">
+                  Next
+                </button>
+              </div>
+              <div className="px-14 py-6 absolute left-0 z-10">
+                <button className="bg-red-600 hover:bg-yellow-300 duration-300 p-6 text-white hover:text-black rounded-full left-5 transform hover:scale-150 cursor-pointer">
+                  Previous
+                </button>
+              </div>
+              <form>
+                <h2 className="font-mono focus-within:text-transparent">
+                  SEARCH YOUR POKEMON!
+                </h2>
+                <div className="relative mr-6 my-2">
+                  <input
+                    type="text"
+                    placeholder="Search your Pokemon!"
+                    onChange={handleChange}
+                    className="border-2 border-red-600 p-4 transform focus:scale-150 duration-300 ease-in-out focus:ring-8 focus:rounded-full"
+                  />
+                </div>
+              </form>
+            </div>
+
+            {/*Displaying Pokemon Info */}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredPokemons.map((pokemon: PokemonTypes, index: number) => (
+                <li
+                  key={index}
+                  className="text-center items-center list-none m-4 p-3"
+                >
+                  {{ pokemon } ? (
+                    <span className="w-full bg-red-600 hover:bg-yellow-300 duration-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-black hover:text-red-600">
+                      <Link href={`/pokemon/${index + 1}`} passHref>
+                        <a className="flex flex-col p-5 items-center justify-center text-center">
+                          <span className="capitalize text-xl font-bold font-mono">
+                            {pokemon.name}
+                          </span>
+                          <br></br>
+                          <div className="transform hover:scale-150 duration-300 cursor-pointer">
+                            {!pokemon.image ? (
+                              "Loading . . ."
+                            ) : (
+                              <Image
+                                src={pokemon.image}
+                                height={100}
+                                width={100}
+                                alt={pokemon.name}
+                              />
+                            )}
+                          </div>
+                        </a>
+                      </Link>
+                    </span>
+                  ) : (
+                    "loading . . ."
+                  )}
+                </li>
+              ))}
+            </div>
+          </Layout>
         </>
       );
     }
