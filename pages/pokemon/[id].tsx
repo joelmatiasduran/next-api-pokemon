@@ -75,7 +75,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
             </div>
           </div>
           {/*Evolution */}
-          <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg">
+          <div className="flex flex-col items-center justify-center w-full lg:w-1/3 h-1/3 bg-red-600 rounded-lg">
             <h2 className="text-3xl p-10 text-white">Evolutions</h2>
             <br></br>
             <div className="text-center flex flex-wrap">
