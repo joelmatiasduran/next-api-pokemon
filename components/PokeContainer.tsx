@@ -8,7 +8,7 @@ interface Props {
   pokemons: any;
 }
 
-const PokeContainer = (pokemons: Props) => {
+const PokeContainer: React.FC<Props> = (pokemons: Props) => {
   return (
     <>
       <a>

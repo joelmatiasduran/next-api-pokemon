@@ -10,7 +10,7 @@ interface Props {
   pokemon: any;
 }
 
-const Pokemon = withPageAuthRequired((pokemon: any) => {
+const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
   const pokemondescription = pokemon.pokemon.moves;
   const pokemonEvolution = pokemon.pokemandesc.chain.evolves_to;
   const pokemonName = pokemon.pokemon.name;

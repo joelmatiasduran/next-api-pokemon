@@ -2,7 +2,7 @@ import React from "react";
 
 interface Props {}
 
-const Footer = (props: Props) => {
+const Footer: React.FC<Props> = () => {
   return (
     <>
       <footer className="text-center bg-red-700 p-10 text-white font-mono">

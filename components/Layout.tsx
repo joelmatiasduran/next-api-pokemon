@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Head from "next/head";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   title?: string;
 }
 
@@ -13,8 +13,12 @@ const Layout: React.FC<Props> = ({ children, title }) => {
     <>
       <Head>
         <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Navbar user={""} />
+      <header>
+        <Navbar user={""} />
+      </header>
       <main>{children}</main>
       <Footer />
     </>

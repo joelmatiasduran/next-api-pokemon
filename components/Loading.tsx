@@ -28,9 +28,3 @@ const Loading: React.FC<Props> = () => {
 };
 
 export default Loading;
-
-/**
- * Wrap any Lottie animations you want the effect to apply to with a div tag with
- * the class "hoverEffects" and the code below should handle playing on hover and
- * playing in reverse on mouse leave.
- */

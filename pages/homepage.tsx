@@ -14,23 +14,14 @@ import {
 import Squirtle from "../components/Squirtle";
 
 interface Props {
-  user: string;
-  pokemons: any;
-  rawdata: any;
+  user: { name: string };
+  pokemons: PokemonTypes;
+  rawdata: FetchAllPokemonResponse;
+  notFound: boolean;
 }
 
-const HomePage = withPageAuthRequired(
-  ({
-    user,
-    pokemons,
-    rawdata,
-    notFound,
-  }: {
-    user: { name: string };
-    pokemons: PokemonTypes;
-    rawdata: FetchAllPokemonResponse;
-    notFound: boolean;
-  }) => {
+const HomePage: React.FC<Props> = withPageAuthRequired(
+  ({ user, pokemons, rawdata, notFound }: Props) => {
     if (notFound) {
       return <p>Loading...</p>;
     } else {
@@ -153,11 +144,13 @@ export const getStaticProps: GetStaticProps = async (query) => {
 
   const pokemons = await Promise.all(
     data.map(async (result: any, index: number) => {
+      //Index 0 doesn't exist, so we add a 1
       const paddedIndex = index + 1;
       const response = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${paddedIndex}/`
       );
       const pokeid = response.data;
+      //Location of the image
       const image = pokeid.sprites.front_default;
 
       return {

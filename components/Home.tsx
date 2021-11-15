@@ -1,23 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-//Axios must be used for http request
-
-//Here I have to display 20 pokemons
-
 //Create a pagination
 
-//Create a search input that filter the list by name
+//Add a Link to the moves
 
-//Each Pokemon must display: Name and photo
-
-{
-  /* HERE IS THE PART OF STATIC SITE GENERATION*/
-}
-
-//When the user clicks on the Item it will be redirected to item's description > ﻿https://pokeapi.co/api/v2/pokemon/id
-
-//Description parameters must include "﻿Move's name" and "evolutions"
+//Refactor Components
 
 //When user clicks on "Evolution" it must be redirected to Evolution's related info.
 
@@ -28,7 +16,7 @@ interface Props {
   current_price: number;
 }
 
-const HomePage = (props: Props) => {
+const HomePage: React.FC<Props> = (props: Props) => {
   return (
     <>
       <div>
@@ -49,10 +37,10 @@ const HomePage = (props: Props) => {
         {/*filteredCoins.map((coin) => {
           return (
             <Pokemon
-              key={coin.id}
-              name={coin.name}
-              image={coin.image}
-              price={coin.current_price}
+              key={something.id}
+              name={something.name}
+              image={something.image}
+              price={something.current_price}
             />
           );
         })*/}
