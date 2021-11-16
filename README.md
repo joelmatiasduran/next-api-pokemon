@@ -10,6 +10,12 @@ npm run dev
 yarn dev
 ```
 
+## AUTHENTICATION DATA
+
+| email             | password |
+| ----------------- | :------: |
+| invite@invite.com |  invite  |
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## This Project Uses:

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  .sidebar-icon {
-    @apply relative flex items-center justify-center
-            h-12 w-12;
+  .center-it {
+    @apply flex items-center justify-center
+            h-full w-full;
   }
 }

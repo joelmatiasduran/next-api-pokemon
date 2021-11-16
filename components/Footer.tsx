@@ -5,8 +5,8 @@ interface Props {}
 const Footer: React.FC<Props> = () => {
   return (
     <>
-      <footer className="flex flex-col items-center justify-center text-center bg-red-700 p-10 text-white font-mono">
-        <div className="flex flex-col">
+      <footer className="flex flex-col items-center justify-center text-center bg-red-700 p-10 text-white font-mono group">
+        <div className="flex flex-col ">
           Made with plenty of coffee By me : D
           <a
             target="_blank"
