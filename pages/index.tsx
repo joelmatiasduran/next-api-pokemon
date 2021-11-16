@@ -34,9 +34,6 @@ const LoginPage: React.FC<Props> = () => {
 
   return (
     <>
-      <Head>
-        <title>Login</title>
-      </Head>
       <Layout title="Login | Next.js">
         <section className="h-full w-full text-black bg-yellow-300">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">

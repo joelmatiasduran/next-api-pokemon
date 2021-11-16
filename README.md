@@ -14,8 +14,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## This Project Uses:
 
--Axios
--Auth with Auth0
--Tailwind CSS
+-(Axios)[https://github.com/axios/axios]
 
--
+-Auth with (Auth0)[https://auth0.com/]
+
+-(Tailwind CSS)[https://tailwindcss.com/]
+
+-(Next Js 12)[https://nextjs.org/] with (TypeScript)[https://nextjs.org/docs/basic-features/typescript]
+
+-(SWR)[https://swr.vercel.app/]
+
+-(Lottie by Airbnb)[https://github.com/airbnb/lottie-web]
