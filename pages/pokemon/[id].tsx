@@ -1,5 +1,6 @@
 import React from "react";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import { motion } from "framer-motion";
 import { GetServerSideProps } from "next";
 import axios from "axios";
 import Image from "next/image";

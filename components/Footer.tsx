@@ -7,7 +7,18 @@ const Footer: React.FC<Props> = () => {
     <>
       <footer className="flex flex-col items-center justify-center text-center bg-red-700 p-10 text-white font-mono group">
         <div className="flex flex-col ">
-          Made with plenty of coffee By me : D
+          <span className="flex flex-row">
+            Made with plenty of coffee By&nbsp;
+            <a
+              target="_blank"
+              href="https://joelmatias.netlify.app/"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-400 hover:scale-150 transform duration-300"
+            >
+              Joel&nbsp;
+            </a>
+            : D
+          </span>
           <a
             target="_blank"
             href="https://github.com/joelmatiasduran/next-api-pokemon"

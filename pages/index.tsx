@@ -45,10 +45,10 @@ const LoginPage: React.FC<Props> = () => {
               <motion.div
                 drag
                 dragConstraints={{
-                  top: -50,
-                  left: -50,
-                  right: 50,
-                  bottom: 50,
+                  top: -500,
+                  left: -500,
+                  right: 500,
+                  bottom: 500,
                 }}
               >
                 <div
