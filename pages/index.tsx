@@ -5,6 +5,7 @@ import lottie from "lottie-web";
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import { motion } from "framer-motion";
 
 interface Props {
   user: String;
@@ -41,10 +42,20 @@ const LoginPage: React.FC<Props> = () => {
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-mono">
                 Welcome to the Pokemon API.{" "}
               </h1>
-              <div
-                className="elementottie h-60 w-60 items-center justify-center text-center"
-                ref={elementottie}
-              ></div>
+              <motion.div
+                drag
+                dragConstraints={{
+                  top: -50,
+                  left: -50,
+                  right: 50,
+                  bottom: 50,
+                }}
+              >
+                <div
+                  className="elementottie h-60 w-60 items-center justify-center text-center cursor-pointer"
+                  ref={elementottie}
+                ></div>
+              </motion.div>
               {!user && (
                 <p className="leading-relaxed mb-8 font-normal">
                   Please Login to get access to the Pokemon API, and see all of

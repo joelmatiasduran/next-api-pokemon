@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import lottie from "lottie-web";
+import { motion } from "framer-motion";
 
 interface Props {}
 
