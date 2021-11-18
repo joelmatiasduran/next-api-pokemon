@@ -116,7 +116,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                       className="w-full bg-red-600 hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-black hover:text-red-600 group"
                     >
                       <Link href={`/pokemon/${index + 1}`} passHref>
-                        <a className="flex flex-col p-5 items-center justify-center text-center">
+                        <a className="flex flex-col p-5 items-center justify-center text-center group">
                           <span className="capitalize text-xl font-bold font-mono">
                             {pokemon.name}
                           </span>

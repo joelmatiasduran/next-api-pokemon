@@ -90,7 +90,6 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
           {/*Evolution */}
           <motion.div
             whileHover={{
-              scale: 1.1,
               boxShadow: "0px 0px 40px #00f7ff",
             }}
             className="flex flex-col items-center justify-center w-full lg:w-1/3 h-1/3 bg-red-600 rounded-lg"
@@ -110,7 +109,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                         pokemonEvolution.species.url.split("/")[6]
                       }`}
                     >
-                      <a className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+                      <a className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-black rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
                         {pokemonEvolution.species.name}
                       </a>
                     </Link>
