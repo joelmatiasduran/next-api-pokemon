@@ -36,7 +36,7 @@ const LoginPage: React.FC<Props> = () => {
   return (
     <>
       <Layout title="Login | Next.js">
-        <section className="h-full w-full text-black bg-gradient-to-r from-yellow-300 to-yellow-400">
+        <section className="h-full w-full text-black bg-yellow-300">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div className="flex items-center justify-center flex-col text-center lg:w-2/3 w-full">
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-mono">
@@ -69,9 +69,12 @@ const LoginPage: React.FC<Props> = () => {
               )}
               <div className="flex justify-center mt-10">
                 <motion.button
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: "0px 0px 40px #ff0000 ",
+                  }}
                   whileTap={{ scale: 0.9 }}
-                  className="border-2 border-white  text-white rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-red-600 hover:bg-transparent hover:text-black transition ease-in-out duration-700"
+                  className="border-2 border-red-600  text-white rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-red-600 hover:bg-black hover:text-white"
                 >
                   {!user && (
                     <Link href="/api/auth/login">
