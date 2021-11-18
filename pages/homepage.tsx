@@ -44,11 +44,15 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
         <>
           <Layout title="Home | Next.js">
             <div className="flex flex-col items-center text-center justify-center mb-10">
-              <h1 className="w-full flex-col md:flex-col text-2xl md:text-3xl text-center items-center justify-center p-10 bg-yellow-300">
+              <h1 className="w-full flex-col md:flex-col text-2xl md:text-3xl text-center items-center justify-center p-10 bg-yellow-300 rounded-xl">
                 <Link href="/pokemon/7" passHref>
-                  <a className="items-center justify-center">
+                  <motion.a
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="items-center justify-center"
+                  >
                     <Squirtle />
-                  </a>
+                  </motion.a>
                 </Link>
                 <span className="text-3xl m-5 font-mono">Welcome!!</span>
                 <br></br>
@@ -85,7 +89,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                     type="text"
                     placeholder="Search your Pokemon!"
                     onChange={handleChange}
-                    className="border-2 border-red-600 p-4 transform focus:scale-150 duration-300 ease-in-out focus:ring-8 focus:rounded-full"
+                    className="border-2 border-red-600 p-4 transform duration-300 ease-in-out focus:ring-8 focus:rounded-full"
                   />
                 </div>
               </form>
@@ -95,7 +99,9 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredPokemons.map((pokemon: PokemonTypes, index: number) => (
-                <li
+                <motion.li
+                  initial={{ x: "-250vw" }}
+                  animate={{ x: 0 }}
                   key={index}
                   className="text-center items-center list-none m-4 p-3"
                 >
@@ -133,7 +139,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                   ) : (
                     "loading . . ."
                   )}
-                </li>
+                </motion.li>
               ))}
             </div>
           </Layout>

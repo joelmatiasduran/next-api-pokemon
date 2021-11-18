@@ -22,8 +22,14 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
       <Layout title={`${str2} | Next Js`}>
         <div className="pt-12 h-full w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
           {/*Moves */}
-          <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg">
-            <h2 className="text-3xl p-10 text-white">Moves</h2>
+          <motion.div
+            whileHover={{
+              boxShadow: "0px 0px 40px #00f7ff",
+              x: "500",
+            }}
+            className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg text-white group"
+          >
+            <h2 className="text-3xl p-10 group-hover:underline">Moves</h2>
             <br></br>
             <div className="text-center flex flex-wrap pb-10">
               {/*this time the index value here it should be the value for the next page*/}
@@ -39,14 +45,14 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                       key={index}
                       className="justify-center text-center items-center list-none m-1 p-3"
                     >
-                      <span className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+                      <span className="transform hover:scale-150 duration-300 text-black cursor-pointer w-full capitalize  p-4 bg-white hover:bg-black hover:text-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
                         {pokemondescription.move.name}
                       </span>
                     </div>
                   )
                 )}
             </div>
-          </div>
+          </motion.div>
           {/*The pokemon Itself */}
           <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-3/3 py-6 rounded-lg">
             <h2 className="text-3xl p-10 text-black  font-mono">
@@ -55,7 +61,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
             <motion.div
               whileHover={{
                 scale: 1.1,
-                boxShadow: "0px 0px 40px #ffffff ",
+                boxShadow: "0px 0px 40px #00f7ff",
               }}
               whileTap={{ scale: 0.9 }}
               className="bg-red-600 items-center justify-center rounded-full p-12 h-100 w-100"
@@ -82,7 +88,13 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
             </motion.div>
           </div>
           {/*Evolution */}
-          <div className="flex flex-col items-center justify-center w-full lg:w-1/3 h-1/3 bg-red-600 rounded-lg">
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 40px #00f7ff",
+            }}
+            className="flex flex-col items-center justify-center w-full lg:w-1/3 h-1/3 bg-red-600 rounded-lg"
+          >
             <h2 className="text-3xl p-10 text-white">Evolutions</h2>
             <br></br>
             <div className="text-center flex flex-wrap">
@@ -110,7 +122,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                 Evolutions
               </a>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </Layout>
     </>
