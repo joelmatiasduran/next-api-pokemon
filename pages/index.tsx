@@ -45,14 +45,14 @@ const LoginPage: React.FC<Props> = () => {
               <motion.div
                 drag
                 dragConstraints={{
-                  top: -500,
+                  top: -370,
                   left: -500,
                   right: 500,
-                  bottom: 500,
+                  bottom: 370,
                 }}
               >
                 <div
-                  className="elementottie h-60 w-60 items-center justify-center text-center cursor-pointer"
+                  className="elementottie h-60 w-60 items-center justify-center text-center cursor-move"
                   ref={elementottie}
                 ></div>
               </motion.div>
@@ -68,7 +68,11 @@ const LoginPage: React.FC<Props> = () => {
                 </>
               )}
               <div className="flex justify-center mt-10">
-                <button className="border-2 border-white  text-white rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-red-600 hover:bg-transparent hover:text-black transition ease-in-out duration-700">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="border-2 border-white  text-white rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-red-600 hover:bg-transparent hover:text-black transition ease-in-out duration-700"
+                >
                   {!user && (
                     <Link href="/api/auth/login">
                       <a className="flex flex-row">
@@ -91,7 +95,7 @@ const LoginPage: React.FC<Props> = () => {
                     </Link>
                   )}
                   {user && <h2>Loading...</h2>}
-                </button>
+                </motion.button>
                 {user && (
                   <button className="animate-spin">
                     <svg

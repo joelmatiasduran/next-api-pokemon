@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
+import { motion } from "framer-motion";
 
 interface Props {
   user: string;
@@ -11,7 +12,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      <nav className="flex justify-between p-5 bg-blue-400 text-white">
+      <nav className="flex justify-between p-5 bg-blue-400  text-white">
         <Link href="/homepage">
           <a className="flex flex-row hover:text-black duration-300 font-mono">
             Home{" "}

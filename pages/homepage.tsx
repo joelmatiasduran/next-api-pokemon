@@ -13,6 +13,7 @@ import {
 } from "../interfaces/PokemonTypes";
 import Squirtle from "../components/Squirtle";
 import Layout from "../components/Layout";
+import { motion } from "framer-motion";
 
 interface Props {
   user: { name: string };
@@ -44,7 +45,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
           <Layout title="Home | Next.js">
             <div className="flex flex-col items-center text-center justify-center mb-10">
               <h1 className="w-full flex-col md:flex-col text-2xl md:text-3xl text-center items-center justify-center p-10 bg-yellow-300">
-                <Link href="/pokemon/7">
+                <Link href="/pokemon/7" passHref>
                   <a className="items-center justify-center">
                     <Squirtle />
                   </a>
