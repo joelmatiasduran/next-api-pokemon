@@ -100,7 +100,15 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                   className="text-center items-center list-none m-4 p-3"
                 >
                   {{ pokemon } ? (
-                    <span className="w-full bg-red-600 hover:bg-yellow-300 duration-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-black hover:text-red-600">
+                    <motion.span
+                      initial={{
+                        boxShadow: "0px 0px 40px #ff0000 ",
+                      }}
+                      whileHover={{
+                        scale: 1.1,
+                      }}
+                      className="w-full bg-red-600 hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-black hover:text-red-600 group"
+                    >
                       <Link href={`/pokemon/${index + 1}`} passHref>
                         <a className="flex flex-col p-5 items-center justify-center text-center">
                           <span className="capitalize text-xl font-bold font-mono">
@@ -121,7 +129,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                           </div>
                         </a>
                       </Link>
-                    </span>
+                    </motion.span>
                   ) : (
                     "loading . . ."
                   )}

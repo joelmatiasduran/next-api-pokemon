@@ -65,7 +65,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
               {/* <Image src={user.picture} alt={user.name} /> */}
               <Link href="api/auth/logout" passHref>
                 <motion.a
-                  whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #ffe600 " }}
+                  whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #00b7ff " }}
                   className="flex flex-row p-4 rounded-full hover:bg-white"
                 >
                   <svg
