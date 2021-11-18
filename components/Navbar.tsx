@@ -16,6 +16,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
         <Link href="/homepage" passHref>
           <motion.a
             whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #ffe600 " }}
+            whileTap={{ scale: 0.9 }}
             className="flex flex-row hover:text-black font-mono p-4 rounded-full hover:bg-yellow-300"
           >
             Home{" "}
@@ -40,6 +41,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
             <Link href="/api/auth/login" passHref>
               <motion.a
                 whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #ffe600 " }}
+                whileTap={{ scale: 0.9 }}
                 className="flex flex-row p-4 rounded-full hover:bg-yellow-300"
               >
                 <svg
@@ -66,6 +68,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
               <Link href="api/auth/logout" passHref>
                 <motion.a
                   whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #00b7ff " }}
+                  whileTap={{ scale: 0.9 }}
                   className="flex flex-row p-4 rounded-full hover:bg-white"
                 >
                   <svg

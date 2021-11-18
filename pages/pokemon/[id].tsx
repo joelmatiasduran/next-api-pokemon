@@ -20,7 +20,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
   return (
     <>
       <Layout title={`${str2} | Next Js`}>
-        <div className="h-full w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
+        <div className="pt-12 h-full w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
           {/*Moves */}
           <div className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg">
             <h2 className="text-3xl p-10 text-white">Moves</h2>
@@ -52,7 +52,14 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
             <h2 className="text-3xl p-10 text-black  font-mono">
               Who is that pokemon?
             </h2>
-            <div className="transform animate-spin bg-red-600 items-center justify-center rounded-full p-12 h-100 w-100">
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0px 0px 40px #ffffff ",
+              }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-red-600 items-center justify-center rounded-full p-12 h-100 w-100"
+            >
               <h2 className="mt-4 text-center text-2xl text-white capitalize font-mono">
                 {pokemon.pokemon.name}
               </h2>
@@ -72,7 +79,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                   </a>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
           {/*Evolution */}
           <div className="flex flex-col items-center justify-center w-full lg:w-1/3 h-1/3 bg-red-600 rounded-lg">

@@ -50,6 +50,11 @@ const LoginPage: React.FC<Props> = () => {
                   right: 500,
                   bottom: 370,
                 }}
+                whileHover={{
+                  boxShadow: "0px 0px 40px #00eeff ",
+                  borderRadius: "100%",
+                  padding: "4rem 4rem",
+                }}
               >
                 <div
                   className="elementottie h-60 w-60 items-center justify-center text-center cursor-move"
