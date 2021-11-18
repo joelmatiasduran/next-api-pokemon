@@ -36,7 +36,7 @@ const LoginPage: React.FC<Props> = () => {
   return (
     <>
       <Layout title="Login | Next.js">
-        <section className="h-full w-full text-black bg-yellow-300">
+        <section className="h-full w-full text-black bg-gradient-to-r from-yellow-300 to-yellow-400">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div className="flex items-center justify-center flex-col text-center lg:w-2/3 w-full">
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-mono">

@@ -13,8 +13,11 @@ const Navbar: React.FC<Props> = (props: Props) => {
   return (
     <>
       <nav className="flex justify-between p-5 bg-blue-400  text-white">
-        <Link href="/homepage">
-          <a className="flex flex-row hover:text-black duration-300 font-mono">
+        <Link href="/homepage" passHref>
+          <motion.a
+            whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #ffe600 " }}
+            className="flex flex-row hover:text-black font-mono p-4 rounded-full hover:bg-yellow-300"
+          >
             Home{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,12 +33,15 @@ const Navbar: React.FC<Props> = (props: Props) => {
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
               />
             </svg>
-          </a>
+          </motion.a>
         </Link>
         <div className="hover:text-black duration-300 font-mono">
           {!user && (
-            <Link href="/api/auth/login">
-              <a className="flex flex-row">
+            <Link href="/api/auth/login" passHref>
+              <motion.a
+                whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #ffe600 " }}
+                className="flex flex-row p-4 rounded-full hover:bg-yellow-300"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -51,14 +57,17 @@ const Navbar: React.FC<Props> = (props: Props) => {
                   />
                 </svg>
                 Login
-              </a>
+              </motion.a>
             </Link>
           )}
           {user && (
             <>
               {/* <Image src={user.picture} alt={user.name} /> */}
-              <Link href="api/auth/logout">
-                <a className="flex flex-row">
+              <Link href="api/auth/logout" passHref>
+                <motion.a
+                  whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #ffe600 " }}
+                  className="flex flex-row p-4 rounded-full hover:bg-white"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -74,7 +83,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
                     />
                   </svg>
                   Logout
-                </a>
+                </motion.a>
               </Link>
             </>
           )}

@@ -13,7 +13,7 @@ const Footer: React.FC<Props> = () => {
               target="_blank"
               href="https://joelmatias.netlify.app/"
               rel="noopener noreferrer"
-              className="hover:text-yellow-400 hover:scale-150 transform duration-300"
+              className="hover:text-yellow-400 hover:scale-150 hover:-skew-y-12 hover:translate-y-2 transform duration-300"
             >
               Joel&nbsp;
             </a>
