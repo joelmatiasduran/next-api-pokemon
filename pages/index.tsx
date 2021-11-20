@@ -87,7 +87,7 @@ const LoginPage: React.FC<Props> = () => {
                     boxShadow: "0px 0px 40px #ff0000 ",
                   }}
                   whileTap={{ scale: 0.9 }}
-                  className="border-2 border-red-600  text-white rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-black hover:bg-black hover:text-white"
+                  className="hover:border-2 border-red-600  text-black rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-white hover:bg-black hover:text-white"
                 >
                   {!user && (
                     <Link href="/api/auth/login">
