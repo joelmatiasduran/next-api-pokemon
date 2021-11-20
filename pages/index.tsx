@@ -39,7 +39,14 @@ const LoginPage: React.FC<Props> = () => {
         <section className="h-full w-full text-black bg-yellow-300">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div className="flex items-center justify-center flex-col text-center lg:w-2/3 w-full">
-              <motion.h1 className="transform title-font sm:text-5xl text-3xl mb-4 font-medium	 text-black font-mono">
+              <motion.h1
+                initial={{
+                  skew: "(y-30)",
+
+                  padding: "3rem 3rem",
+                }}
+                className="transform p-2 title-font sm:text-5xl text-3xl mb-4 font-medium bg-red-600 text-black font-mono"
+              >
                 Welcome to the Pokemon API.{" "}
               </motion.h1>
               <motion.div
