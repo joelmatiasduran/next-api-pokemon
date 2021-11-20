@@ -63,11 +63,11 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                   </span>
                 </div>
               </h1>
-              <div className="flex flex-col md:p-10 items-center justify-center text-center transform hover:scale-150 bg-blue-400 hover:bg-transparent hover:border-blue-400 border-2 border-transparent rounded-lg text-black hover:text-blue-400 h-24 w-full md:w-1/3 duration-300">
+              {/* <div className="flex flex-col md:p-10 items-center justify-center text-center transform hover:scale-150 bg-blue-400 hover:bg-transparent hover:border-blue-400 border-2 border-transparent rounded-lg text-black hover:text-blue-400 h-24 w-full md:w-1/3 duration-300">
                 <h2 className="text-sm m-10 text-center font-bold font-mono">
                   Now that you are logged in, you can see all the pokemons! ;)
                 </h2>
-              </div>
+              </div> */}
             </div>
             <div className="text-center justify-center md:relativ">
               <div className="px-14 py-6 md:absolute right-0 z-10">

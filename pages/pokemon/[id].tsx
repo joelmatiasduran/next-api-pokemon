@@ -109,7 +109,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                         pokemonEvolution.species.url.split("/")[6]
                       }`}
                     >
-                      <a className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-black rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+                      <a className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-black hover:text-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
                         {pokemonEvolution.species.name}
                       </a>
                     </Link>
