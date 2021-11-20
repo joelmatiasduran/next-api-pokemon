@@ -45,7 +45,7 @@ const LoginPage: React.FC<Props> = () => {
 
                   padding: "3rem 3rem",
                 }}
-                className="transform p-2 title-font sm:text-5xl text-3xl mb-4 font-medium bg-red-600 text-black font-mono"
+                className="transform p-2 title-font sm:text-5xl text-3xl mb-4 font-medium text-black font-mono"
               >
                 Welcome to the Pokemon API.{" "}
               </motion.h1>
