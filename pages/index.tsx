@@ -39,9 +39,9 @@ const LoginPage: React.FC<Props> = () => {
         <section className="h-full w-full text-black bg-yellow-300">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div className="flex items-center justify-center flex-col text-center lg:w-2/3 w-full">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-mono">
+              <motion.h1 className="transform title-font sm:text-5xl text-3xl mb-4 font-medium	 text-black font-mono">
                 Welcome to the Pokemon API.{" "}
-              </h1>
+              </motion.h1>
               <motion.div
                 drag
                 dragConstraints={{
@@ -74,12 +74,13 @@ const LoginPage: React.FC<Props> = () => {
               )}
               <div className="flex justify-center mt-10">
                 <motion.button
+                  initial={{ boxShadow: "0px 0px 20px #00e1ff " }}
                   whileHover={{
                     scale: 1.1,
                     boxShadow: "0px 0px 40px #ff0000 ",
                   }}
                   whileTap={{ scale: 0.9 }}
-                  className="border-2 border-red-600  text-white rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-red-600 hover:bg-black hover:text-white"
+                  className="border-2 border-red-600  text-white rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-black hover:bg-black hover:text-white"
                 >
                   {!user && (
                     <Link href="/api/auth/login">
