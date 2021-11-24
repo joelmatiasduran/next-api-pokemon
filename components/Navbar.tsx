@@ -12,7 +12,7 @@ const Navbar: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      <nav className="flex justify-between p-5 bg-blue-400  text-white">
+      <nav className="flex justify-between p-5 bg-blue-400 text-white">
         <Link href="/homepage" passHref>
           <motion.a
             whileHover={{ scale: 1.2, boxShadow: "0px 0px 8px #ffe600 " }}

@@ -43,7 +43,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
       return (
         <>
           <Layout title="Home | Next.js">
-            <div className="bg-black">
+            <div className="bg-red-600">
               <div className="flex flex-col items-center text-center justify-center mb-10">
                 <motion.div
                   initial={{
@@ -75,20 +75,20 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                 </h2>
               </div> */}
               </div>
-              <div className="bg-black h-full">
+              <div className="h-full">
                 <div className="text-center justify-center md:relative h-full py-16">
                   <div className="px-14 py-6 md:absolute right-0 z-10">
-                    <button className="bg-red-600 hover:bg-yellow-300 duration-300 p-6 text-white hover:text-black rounded-full right-5 transform hover:scale-150 cursor-pointer">
+                    <button className="bg-yellow-300 hover:bg-black duration-300 p-6 text-black hover:text-white rounded-full right-5 transform hover:scale-150 cursor-pointer">
                       Next
                     </button>
                   </div>
                   <div className="px-14 py-6 md:absolute left-0 z-10">
-                    <button className="bg-red-600 hover:bg-yellow-300 duration-300 p-6 text-white hover:text-black rounded-full left-5 transform hover:scale-150 cursor-pointer">
+                    <button className="bg-yellow-300 hover:bg-black duration-300 p-6 text-black hover:text-white rounded-full left-5 transform hover:scale-150 cursor-pointer">
                       Previous
                     </button>
                   </div>
                   <form>
-                    <h2 className="font-mono focus-within:text-transparent">
+                    <h2 className="font-mono focus-within:text-transparent text-white">
                       SEARCH YOUR POKEMON!
                     </h2>
                     <div className="relative mr-6 my-2">
@@ -105,7 +105,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
 
               {/*Displaying Pokemon Info */}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-black">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-blue-400">
                 {filteredPokemons.map(
                   (pokemon: PokemonTypes, index: number) => (
                     <motion.li
