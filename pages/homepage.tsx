@@ -43,12 +43,11 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
       return (
         <>
           <Layout title="Home | Next.js">
-            <div className="bg-red-600">
+            <div className="bg-yellow-300">
               <div className="flex flex-col items-center text-center justify-center mb-10">
                 <motion.div
-                  initial={{
-                    boxShadow: "0px 0px 40px #ffd900 ",
-                  }}
+                  initial={{ x: "-250vw" }}
+                  animate={{ x: 0 }}
                   className="w-full flex-col md:flex-col text-2xl md:text-3xl text-center items-center justify-center p-10 bg-yellow-300 rounded-full"
                 >
                   <Link href="/pokemon/7" passHref>
@@ -75,7 +74,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                 </h2>
               </div> */}
               </div>
-              <div className="h-full">
+              <div className="h-full bg-red-500">
                 <div className="text-center justify-center md:relative h-full py-16">
                   <div className="px-14 py-6 md:absolute right-0 z-10">
                     <button className="bg-yellow-300 hover:bg-black duration-300 p-6 text-black hover:text-white rounded-full right-5 transform hover:scale-150 cursor-pointer">
@@ -105,7 +104,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
 
               {/*Displaying Pokemon Info */}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-blue-400">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-black">
                 {filteredPokemons.map(
                   (pokemon: PokemonTypes, index: number) => (
                     <motion.li

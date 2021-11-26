@@ -23,6 +23,8 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
         <div className="pt-12 h-full w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
           {/*Moves */}
           <motion.div
+            initial={{ x: "-250vw" }}
+            animate={{ x: 0 }}
             whileHover={{
               boxShadow: "0px 0px 40px #00f7ff",
               x: "500",
@@ -59,6 +61,8 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
               Who is that pokemon?
             </h2>
             <motion.div
+              initial={{ y: "-250vh" }}
+              animate={{ y: 0 }}
               whileHover={{
                 scale: 1.1,
                 boxShadow: "0px 0px 40px #00f7ff",
@@ -89,6 +93,8 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
           </div>
           {/*Evolution */}
           <motion.div
+            initial={{ x: "+250vw" }}
+            animate={{ x: 0 }}
             whileHover={{
               boxShadow: "0px 0px 40px #00f7ff",
             }}

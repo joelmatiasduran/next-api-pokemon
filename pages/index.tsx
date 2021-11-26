@@ -90,7 +90,7 @@ const LoginPage: React.FC<Props> = () => {
                   className="hover:border-2 border-red-600  text-black rounded-full font-bold py-4 px-6 mr-2 flex items-center bg-white hover:bg-black hover:text-white"
                 >
                   {!user && (
-                    <Link href="/api/auth/login">
+                    <Link href="/api/auth/login" passHref>
                       <a className="flex flex-row">
                         Login
                         <svg
