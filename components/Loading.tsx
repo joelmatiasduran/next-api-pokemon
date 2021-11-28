@@ -30,8 +30,8 @@ const Loading: React.FC<Props> = () => {
           className="elementottie h-60 w-60 items-center justify-center text-center"
           ref={elementottie}
         ></div>
-
-        <div className="elementottietwo h-20 w-60" ref={elementottietwo}></div>
+        <h1 className="text-white text-3xl -pb-6 -mb-6">Loading..</h1>
+        <div className="elementottietwo" ref={elementottietwo}></div>
       </div>
     </>
   );
