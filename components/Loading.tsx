@@ -20,7 +20,7 @@ const Loading: React.FC<Props> = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../public/images/lottie-loading.json"),
+      animationData: require("../public/images/lottie-loadingtwo.json"),
     });
   }, [elementottie, elementottietwo]);
   return (
