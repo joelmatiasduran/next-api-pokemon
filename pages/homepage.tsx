@@ -120,8 +120,9 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                           }}
                           whileHover={{
                             scale: 1.1,
+                            boxShadow: "0px 0px 40px #ffd900 ",
                           }}
-                          className="w-full bg-red-600 hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-black hover:text-red-600 group"
+                          className="w-full bg-red-600 hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-white hover:text-red-600 group"
                         >
                           <Link href={`/pokemon/${index + 1}`} passHref>
                             <a className="flex flex-col p-5 items-center justify-center text-center group">
