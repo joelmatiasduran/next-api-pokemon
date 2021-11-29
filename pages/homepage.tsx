@@ -104,7 +104,7 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
 
               {/*Displaying Pokemon Info */}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-black">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 bg-black min-h-screen">
                 {filteredPokemons.map(
                   (pokemon: PokemonTypes, index: number) => (
                     <motion.li
