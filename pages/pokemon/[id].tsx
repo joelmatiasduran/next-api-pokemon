@@ -123,7 +123,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                 ))}
             </div>
             <Link href={""}>
-              <a className="p-4 m-4 border-2 border-white bg-transparent rounded-full hover:bg-red-700 text-white duration-300  hover:border-white">
+              <a className="p-4 m-4 border-2 border-white bg-transparent rounded-full hover:bg-red-700 text-white duration-300  hover:border-transparent">
                 Evolutions
               </a>
             </Link>
