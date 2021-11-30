@@ -108,8 +108,8 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                 {filteredPokemons.map(
                   (pokemon: PokemonTypes, index: number) => (
                     <motion.li
-                      initial={{ x: "-250vw" }}
-                      animate={{ x: 0 }}
+                      initial={{ y: "250vh" }}
+                      animate={{ y: 0 }}
                       key={index}
                       className="text-center items-center list-none m-4 p-3"
                     >
