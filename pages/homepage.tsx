@@ -121,8 +121,6 @@ const HomePage: React.FC<Props> = withPageAuthRequired(
                           whileHover={{
                             scale: 1.1,
                             boxShadow: "0px 0px 40px #ffd900 ",
-                            padding: "3rem",
-                            border: "5px #ffd900 solid",
                           }}
                           className="w-full bg-red-600 hover:bg-yellow-300 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row text-white hover:text-red-600 group"
                         >

@@ -23,8 +23,8 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
         <div className="md:pt-12 h-full min-h-screen w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
           {/*Moves */}
           <motion.div
-            initial={{ x: "-250vw" }}
-            animate={{ x: 0 }}
+            initial={{ y: "250vh" }}
+            animate={{ y: 0 }}
             whileHover={{
               boxShadow: "0px 0px 40px #00f7ff",
               x: "500",
@@ -98,7 +98,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
             whileHover={{
               boxShadow: "0px 0px 40px #00f7ff",
             }}
-            className="flex flex-col items-center justify-center w-full lg:w-1/3 h-1/3 bg-red-600 rounded-lg"
+            className="flex flex-col items-center justify-center w-full lg:w-1/3 h-1/3 bg-black rounded-lg"
           >
             <h2 className="text-3xl p-10 text-white">Evolutions</h2>
             <br></br>
@@ -115,7 +115,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                         pokemonEvolution.species.url.split("/")[6]
                       }`}
                     >
-                      <a className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-black hover:text-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+                      <a className="transform hover:scale-150 duration-300 cursor-pointer w-full capitalize  p-4 bg-white hover:bg-red-500 hover:text-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
                         {pokemonEvolution.species.name}
                       </a>
                     </Link>
@@ -123,7 +123,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
                 ))}
             </div>
             <Link href={""}>
-              <a className="p-4 m-4 bg-yellow-300 rounded-full hover:bg-transparent hover:text-white duration-300 border border-transparent  hover:border-white">
+              <a className="p-4 m-4 border-2 border-white bg-transparent rounded-full hover:bg-red-700 text-white duration-300  hover:border-white">
                 Evolutions
               </a>
             </Link>
