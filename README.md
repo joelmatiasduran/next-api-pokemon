@@ -28,8 +28,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 -[Next Js 12](https://nextjs.org/) with [TypeScript](https://nextjs.org/docs/basic-features/typescript)
 
--[SWR](https://swr.vercel.app/)
-
 -[Framer Motion](https://www.framer.com/motion/)
 
 -[Lottie by Airbnb](https://github.com/airbnb/lottie-web)
