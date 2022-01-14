@@ -20,7 +20,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
   return (
     <>
       <Layout title={`${str2} | Next Js`}>
-        <div className="md:pt-12 max-h-full h-full min-h-screen w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
+        <div className="md:pt-12 max-h-full  h-full min-h-screen w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
           {/*Moves */}
           <motion.div
             initial={{ y: "250vh" }}
@@ -29,7 +29,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
               boxShadow: "0px 0px 40px #00f7ff",
               x: "500",
             }}
-            className="flex flex-col items-center justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg text-white group"
+            className="flex flex-col items-center max-w-max justify-center w-3/3 lg:w-1/3 h-1/3 bg-red-600 rounded-lg text-white group"
           >
             <h2 className="text-3xl p-10 group-hover:underline">Moves</h2>
             <br></br>
