@@ -20,7 +20,7 @@ const Pokemon: React.FC<Props> = withPageAuthRequired((pokemon: any) => {
   return (
     <>
       <Layout title={`${str2} | Next Js`}>
-        <div className="md:pt-12 md:max-h-full max-h-screen h-full min-h-screen w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
+        <div className="md:pt-12 md:max-h-full h-full min-h-screen w-3/3 flex flex-col lg:flex-row items-center content-center justify-center bg-yellow-300">
           {/*Moves */}
           <motion.div
             initial={{ y: "250vh" }}
